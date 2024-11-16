@@ -1,31 +1,31 @@
 import { useState, useEffect } from 'react'
-const url = "http://localhost:3000/products"
+const url = "http://localhost:3000/categories"
 
 import './App.css'
 
 function App() {
-  const [products, setProducts] = useState([])
+  const [categories, setCategories] = useState([])
   const [name, setName] = useState("")
-  const [price, setPrice] = useState("")
+  const [description, setDescription] = useState("")
 
   // resgatando dados - 1
   useEffect(() => {
     async function getData() {
       const res = await fetch(url); // realializa a consulta oa servidor api
       const data = await res.json();
-      setProducts(data);
+      setCategories(data);
     }
 
     getData();
   }, []);
 
-  // adicao de produtos - 2
+  // adicao de categorias - 2
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const product = {
+    const category = {
       name,
-      price
+      description
     };
 
     const res = await fetch(url, {
@@ -33,14 +33,14 @@ function App() {
       headers: {
         "Content-Type": "application-json"
       },
-      body: JSON.stringify(product)
+      body: JSON.stringify(category)
     });
 
     // carregamento dinamico - 3
 
-    const addedProducts = await res.json()
+    const addedCategory = await res.json()
 
-    setProducts((prevProducts) => [...prevProducts, addedProducts] )
+    setCategories((prevCategories) => [...prevCategories, addedCategory] )
 
   };
 
@@ -50,19 +50,19 @@ function App() {
     <div className='App'>
       <h1>Conectar com Servidor Json</h1>
       <ul>
-        {products.map((product) => (
-          <li key={product.id}> - {product.name} - R$ {product.price}</li>
+        {categories.map((category) => (
+          <li key={category.id}> - {category.name} - {category.description}</li>
         ))}
       </ul>
-      <div className="add-product">
+      <div className="add-category">
         <form onSubmit={handleSubmit}>
           <label>
-            Produto:
+            Categoria:
             <input type="text" name="name" onChange={(e) => setName(e.target.value)} value={name} />
           </label>
           <label>
-            Preço R$:
-            <input type="number" name="price" onChange={(e) => setPrice(e.target.value)} value={price} />
+            Descrição:
+            <input type="text" name="description" onChange={(e) => setDescription(e.target.value)} value={description} />
           </label>
           <button type="submit">Criar</button>
         </form>
