@@ -1,0 +1,19 @@
+{
+    "catgories": [
+        {
+            "id": 1,
+            "name": "Comunidade",
+            "description": "Notícias da Comunidade"
+        },
+        {
+            "id": 2,
+            "name": "Segurança",
+            "description": "Notícias de segurança para comunidade"
+        },
+        {
+            "id": 3,
+            "name": "Diversão",
+            "description": "Notícias de diversão para comunidade"
+        }
+    ]
+}
