@@ -3,16 +3,17 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // components
 import Appbar from './component/Appbar'
+import Footer from './component/Footer'
 
 // pages
-import Home from './pages/Home'
-import Events from './pages/Events'
-import Categories from './pages/Categories'
-import About from './pages/About'
+import Home from './pages/Home/Home'
+import Events from './pages/Events/Events'
+import Categories from './pages/Categories/Categories'
+import About from './pages/About/About'
 
 // styles
 import './App.css'
-import './component/Appbar.css'
+
 
 
 const App = () => {
@@ -20,12 +21,15 @@ const App = () => {
     <div className='App'>
       <BrowserRouter>
         <Appbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/events' element={<Events />} />
-          <Route path='/categories' element={<Categories />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/events' element={<Events />} />
+            <Route path='/categories' element={<Categories />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </div>
+        <Footer />
       </BrowserRouter>
     </div>
   )
