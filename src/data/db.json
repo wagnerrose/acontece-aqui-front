@@ -20,5 +20,60 @@
       "name": "Outros",
       "description": "Apenas um teste"
     }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "name": "Feira de Santana",
+      "event_date": "2024/12/10",
+      "description": "Feira de produtos artesanais do bairro Santana",
+      "user_id": "1",
+      "category_id": "1",
+      "subcategory_id": "1"
+    },
+    {
+      "id": "1",
+      "name": "Feira de Bom Jesus",
+      "event_date": "2024/12/10",
+      "description": "Feira de produtos artesanais do bairro Bom Jesus",
+      "user_id": "1",
+      "category_id": "1",
+      "subcategory_id": "1"
+    },
+    {
+      "id": "1",
+      "name": "Feira de Bom Jesus",
+      "event_date": "2024/12/10",
+      "description": "Feira de produtos artesanais do bairro Bom Jesus",
+      "user_id": "1",
+      "category_id": "1",
+      "subcategory_id": "1"
+    }    
+  ],
+  "subcategories": [
+    {
+      "name": "Feiras",
+      "description": "Feiras de bairro",
+      "category_id": "1"
+    },
+    {
+      "name": "Exposições",
+      "description": "Exposições na cidade",
+      "category_id": "1"
+    }
+  ],
+  "users": [
+    {
+      "name": "Wagner Rose",
+      "cpf": "123.456.789-01"
+    },
+    {
+      "name": "Alexandre Bitencurt",
+      "cpf": "123.456.789-01"
+    },
+    {
+      "name": "Matheus Roberto",
+      "cpf": "123.456.789-01"
+    }
   ]
 }
