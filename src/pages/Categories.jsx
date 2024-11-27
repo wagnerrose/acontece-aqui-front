@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
 
-// const url = "http://localhost:3004/categories" // conexao json server porta 3004import './App.css'
-const url = "http://localhost:3000/api/categories" // conexao rails server
+// Styles
+import './Categories.css'
+
+const url = "http://localhost:3004/categories" // conexao json server porta 3004import './App.css'
+// const url = "http://localhost:3000/api/categories" // conexao rails server
 
 function App() {
   const [categories, setCategories] = useState([])
@@ -46,7 +49,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Conectar com Servidor Json</h1>
+      <h1>Categorias</h1>
       <ul>
         {categories.map((category) => (
           <li key={category.id}> {category.name} - {category.description}</li>
