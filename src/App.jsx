@@ -10,10 +10,11 @@ import Home from './pages/Home/Home'
 import Events from './pages/Events/Events'
 import Categories from './pages/Categories/Categories'
 import About from './pages/About/About'
+import Login from './pages/Login/Login'
+import Register from './pages/Register/Register'
 
 // styles
 import './App.css'
-
 
 
 const App = () => {
@@ -26,7 +27,9 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/events' element={<Events />} />
             <Route path='/categories' element={<Categories />} />
-            <Route path='/about' element={<About />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/about' element={<About />} />            
           </Routes>
         </div>
         <Footer />

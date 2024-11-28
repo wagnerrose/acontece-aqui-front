@@ -48,32 +48,40 @@
       "user_id": "1",
       "category_id": "1",
       "subcategory_id": "1"
-    }    
+    }
   ],
   "subcategories": [
     {
       "name": "Feiras",
       "description": "Feiras de bairro",
-      "category_id": "1"
+      "category_id": "1",
+      "id": "fef5"
     },
     {
       "name": "Exposições",
       "description": "Exposições na cidade",
-      "category_id": "1"
+      "category_id": "1",
+      "id": "4836"
     }
   ],
   "users": [
     {
       "name": "Wagner Rose",
-      "cpf": "123.456.789-01"
+      "cpf": "123.456.789-01",
+      "password": "bela1010",
+      "id": "f44e"
     },
     {
       "name": "Alexandre Bitencurt",
-      "cpf": "123.456.789-01"
+      "cpf": "123.456.789-01",
+      "password": "bela1010",
+      "id": "5498"
     },
     {
       "name": "Matheus Roberto",
-      "cpf": "123.456.789-01"
+      "cpf": "123.456.789-01",
+      "password": "bela1010",
+      "id": "fae1"
     }
   ]
 }
