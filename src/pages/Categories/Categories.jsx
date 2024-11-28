@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 // Styles
-import './Categories.css'
+import styles from './Categories.module.css'
 
 const url = "http://localhost:3004/categories" // conexao json server porta 3004import './App.css'
 // const url = "http://localhost:3000/api/categories" // conexao rails server
@@ -43,12 +43,12 @@ function App() {
 
     const addedCategory = await res.json()
 
-    setCategories((prevCategories) => [...prevCategories, addedCategory] )
+    setCategories((prevCategories) => [...prevCategories, addedCategory])
 
   };
 
   return (
-    <div className='App'>
+    <div className='styles.categories'>
       <h1>Categorias</h1>
       <ul>
         {categories.map((category) => (
@@ -58,14 +58,24 @@ function App() {
       <div className="add-category">
         <form onSubmit={handleSubmit}>
           <label>
-            Categoria:
-            <input type="text" name="name" onChange={(e) => setName(e.target.value)} value={name} />
+            <span>Categoria:</span>
+            <input type="text" 
+            name="name" 
+            placeholder="Informe a Categoria"
+            required
+            onChange={(e) => setName(e.target.value)} 
+            value={name} />
           </label>
           <label>
-            Descrição:
-            <input type="text" name="description" onChange={(e) => setDescription(e.target.value)} value={description} />
+            <span>Descrição:</span>
+            <input
+              type="text" name="description"
+              placeholder="Informe a descrição"
+              required
+              onChange={(e) => setDescription(e.target.value)}
+              value={description} />
           </label>
-          <button type="submit">Criar</button>
+          <button className="btn " type="submit">Criar</button>
         </form>
       </div>
     </div >
